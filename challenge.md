@@ -131,6 +131,7 @@ interview screening questions (a form you fill when applying for a job):
 - In the Northwind database, what is the type of relationship between the
   `Employee` and `Territory` tables?
   
+*Employees and Territory tables constitute a one to many relationship. This probably has an underlying business logic, since perhaps you do not want multiple employees in the same territory, but some employees may be able to handle multiple low volume territories single-handedly. This is borne out by examination of the database, wherein each territory clearly has only one employee, but there are employees who do have multiple territories. 
   
 - What is a situation where a document store (like MongoDB) is appropriate, and
   what is a situation where it is not appropriate?
