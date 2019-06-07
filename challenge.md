@@ -130,9 +130,17 @@ interview screening questions (a form you fill when applying for a job):
 
 - In the Northwind database, what is the type of relationship between the
   `Employee` and `Territory` tables?
+  
+  
 - What is a situation where a document store (like MongoDB) is appropriate, and
   what is a situation where it is not appropriate?
+  
+*MongoDB, as well as many so-called NoSQL databases, are most apposite for so-called unstructured data, where there is no 
+pre-defined or naturally imposed schema. Indeed, because it is based on JSON key-value pairs, one need not be too worried  about dealing with the complexities of declaring sub-algebraic (enumerated) data types. Conversely, this greatly reduces the probative and investigatory powers of a NoSQL database, unless the underlying data formats are well defined. Moreover, NoSQL systems such as Mongo tend to be - because of the focus on unstructured key-value pairs - more easily amenable to a MapReduce style distributed framework. 
+  
 - What is "NewSQL", and what is it trying to achieve?
+
+*NewSQL refers broadly to a class of databases which need to be scalable and highly distributed (an arena at which NoSQL excels) but have strong needs for guarantees on performance, read-write security, and structural preservation (often making a relational schema apposite). Broadly speaking, they form a spectrum of databases that seek to combine certain benefits of NoSQL with certain benefits of traditional RDM systems; the particular mix needed for particular use cases will naturally involve tradeoffs (viz. the CAP theorem). One of the most interesting of these is FoundationDB, acquired by Apple some years ago, which is a transactional, highly distributed and scalable, but imposes no particular model; instead it is "multi-model" in the same sense Wolfram Language or Lisp are "multi-paradigm" programming languages.  
 
 ### Part 5 - Turn it in!
 Add all the files you wrote (`demo_data.py`, `northwind.py`), as well as this
